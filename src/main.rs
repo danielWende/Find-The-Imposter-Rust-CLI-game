@@ -2,7 +2,7 @@ use std::fs::File;
 use std::io::{self, Read, Write};
 use rand::Rng;
 use prettytable::{Table, Row, Cell};
-use ansi_term::Colour;
+use ansi_term::Colour; // Import the Colour module for colored text.
 
 fn main() {
     println!("User Data Application");
@@ -56,6 +56,7 @@ fn main() {
     }
 }
 
+// Define a User struct
 #[derive(Clone, PartialEq)]
 struct User {
     name: String,
@@ -63,11 +64,13 @@ struct User {
 }
 
 impl User {
+    // Add a method to check if a user is the imposter
     fn is_imposter(&self) -> bool {
         self.age == "Imposter"
     }
 }
 
+// Load user data from a file
 fn load_user_data() -> Vec<User> {
     let mut user_data = Vec::new();
 
@@ -89,6 +92,7 @@ fn load_user_data() -> Vec<User> {
     user_data
 }
 
+// Read user input as an integer
 fn read_input_as_integer() -> Result<u32, std::num::ParseIntError> {
     let mut input = String::new();
     io::stdin()
@@ -97,6 +101,7 @@ fn read_input_as_integer() -> Result<u32, std::num::ParseIntError> {
     input.trim().parse()
 }
 
+// Add a new user
 fn add_user() -> User {
     println!("What is the user's name?");
     let name = read_input_as_string();
@@ -107,6 +112,7 @@ fn add_user() -> User {
     User { name, age }
 }
 
+// Read user input as a string
 fn read_input_as_string() -> String {
     let mut input = String::new();
     io::stdin()
@@ -115,6 +121,7 @@ fn read_input_as_string() -> String {
     input.trim().to_string()
 }
 
+// Remove a user and add them to the removed_users list
 fn remove_user(user_data: &mut Vec<User>, removed_users: &mut Vec<User>) {
     if user_data.is_empty() {
         println!("There are no users to remove.");
@@ -138,6 +145,7 @@ fn remove_user(user_data: &mut Vec<User>, removed_users: &mut Vec<User>) {
     }
 }
 
+// Display user data in a table
 fn view_user_data(user_data: &Vec<User>) {
     if user_data.is_empty() {
         println!("User data is empty.");
@@ -159,6 +167,7 @@ fn view_user_data(user_data: &Vec<User>) {
     }
 }
 
+// Save user data to a file
 fn save_user_data(user_data: &Vec<User>) {
     let mut file = File::create("userdata.txt").expect("Failed to create userdata.txt");
     for user in user_data {
@@ -166,6 +175,7 @@ fn save_user_data(user_data: &Vec<User>) {
     }
 }
 
+// Play the guessing game
 fn play_game(user_data: &mut Vec<User>, removed_users: &mut Vec<User>) -> bool {
     let mut rng = rand::thread_rng();
     let imposter_index = rng.gen_range(0..user_data.len());
