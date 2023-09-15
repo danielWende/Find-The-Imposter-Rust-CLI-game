@@ -1,5 +1,5 @@
 [package]
-name = "user_data_app"
+name = "Find_The_Imposter"
 version = "0.1.0"
 edition = "2021"
 
@@ -10,3 +10,6 @@ rand = "0.8"
 colored = "2.0"
 prettytable-rs = "^0.10"
 ansi_term = "0.12"
+
+[lib]
+name = "Find_The_Imposter" 
