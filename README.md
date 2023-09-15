@@ -1,6 +1,6 @@
-# User Data Application
+# the find imposter cli game
 
-This is a Rust command-line application that allows you to manage user data and play a guessing game.
+This is a Rust command-line application that allows you to manage users and play a guessing game.
 
 ## Features
 
