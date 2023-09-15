@@ -5,7 +5,6 @@ This is a Rust command-line application that allows you to manage user data and 
 ## Features
 
 - Add users with their name and age.
-- Temporarily remove users.
 - View user data in a table.
 - Play a guessing game to find the imposter user.
 
@@ -20,11 +19,7 @@ This is a Rust command-line application that allows you to manage user data and 
 Follow the on-screen prompts to perform various actions within the application:
 
 - Add User: Add a user with their name and age.
-- Remove User: Temporarily remove a user from the list.
+- Remove User: Remove a user from the list.
 - View User Data: Display user data in a table.
 - Play Game: Play a guessing game to find the imposter user.
 - Exit: Save the user data and exit the application.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
