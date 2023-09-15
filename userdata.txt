@@ -1,0 +1,5 @@
+daniel;24
+blaze;7
+leo;41
+pablo;50
+zoro;30

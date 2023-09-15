@@ -1,0 +1,12 @@
+[package]
+name = "user_data_app"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+rand = "0.8"
+colored = "2.0"
+prettytable-rs = "^0.10"
+ansi_term = "0.12"

@@ -1,0 +1,21 @@
+# Compiled Rust files
+/target/
+
+# Cargo files
+Cargo.lock
+
+# Generated documentation
+/doc/
+
+# Visual Studio Code settings (if you use VSCode)
+.vscode/
+
+# Operating System files
+.DS_Store
+
+# Rust/Cargo-related files
+*.rlib
+*.rmeta
+
+# Ignore executables produced by cargo
+target/
